@@ -1,0 +1,89 @@
+.img-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.container .single {
+  width: 150px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.container .single img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.container .single img:hover {
+  transition: 0.5s;
+  transform: scale(1.09);
+  border-radius: 4px;
+}
+
+.slider .btnClose,
+.slider .btnNext,
+.slider .btnPrev {
+  position: fixed;
+  cursor: pointer;
+  opacity: 0.6;
+  color: #fff;
+  z-index: 999999;
+}
+
+.btnClose:hover,
+.btnNext:hover,
+.btnPrev:hover {
+  opacity: 1;
+  transform: scale(1.5);
+}
+.slider .btnClose {
+  top: 40px;
+  right: 40px;
+}
+
+.slider .btnNext {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 40px;
+}
+
+.slider .btnPrev {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 40px;
+}
+
+.slider {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.fullScreenImage {
+  width: calc(100%-40px);
+  height: calc(100%-40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullScreenImage img {
+  max-width: 50%;
+  max-height: 50%;
+  pointer-events: none;
+  user-select: none;
+}
